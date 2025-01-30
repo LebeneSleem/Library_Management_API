@@ -22,6 +22,11 @@ app.use(cors());
 app.use(helmet());
 app.use(morgan('dev'));
 
+// Root Route
+app.get("/", (req, res) => {
+  res.send("Welcome to the Library Management API");
+});
+
 // API Routes
 app.use('/api/v1/books', bookRoutes);
 
